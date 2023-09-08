@@ -1,4 +1,4 @@
-import React from "react";
+import React = require("react");
 import WelcomeRoutes from "./src/Routes/Welcome.Routes";
 import {
   Roboto_400Regular,
