@@ -2,27 +2,26 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeRoutes from ".";
-import { Text, View } from "react-native";
+import { Button, Text, View } from "react-native";
 const { Navigator, Screen } = createStackNavigator();
-import Welcome from "../pages/Welcome";
 
+const Welcome: React.FC = () => {
+  return (
+    <View>
+      <Text>Hey</Text>
+    </View>
+  );
+};
 
 const WelcomeRoutes: React.FC = () => {
   return (
-
-    <NavigationContainer>
+    <NavigationContainer independent={true}>
       <Navigator>
         <Screen name="Welcome" component={Welcome} />
-        <Screen name="HomeRoutes" component={HomeRoutes} options={{ headerShown: false }} />
+        <Screen name="HomeRoutes" component={HomeRoutes} />
       </Navigator>
     </NavigationContainer>
   );
-  /*  <NavigationContainer independent={true}>
-     <Navigator>
-       <Screen name="Welcome" component={Welcome} />
-       <Screen name="HomeRoutes" component={HomeRoutes} />
-     </Navigator>
-   </NavigationContainer> */
+};
 
-}
 export default WelcomeRoutes;

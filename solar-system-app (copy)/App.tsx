@@ -26,8 +26,8 @@ export default function App() {
   }
 
   return (
-    //<Welcome />
-    <WelcomeRoutes />
-
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Button title="Join the journey" Icon={() => <></>} onPress={log} />
+    </View>
   );
 }
